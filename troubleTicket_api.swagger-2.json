@@ -1,0 +1,360 @@
+
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "",
+    "version": "2.0",
+    "title": "troubleTicket"
+  },
+  "host": "api-designer.rd.francetelecom.fr",
+  "basePath":	"/api-docs/troubleTicket/tmf/v2",
+  "schemes": [
+      "http"
+  ],
+  "consumes": [
+      "application/json"
+  ],
+  "produces": [
+      "application/json"
+  ],  
+  "paths": {
+      
+      "/troubleTicket": {     
+            
+		"post": {
+      "tags": [
+         "troubleTicket"
+      ],            
+      "operationId": "createTroubleTicket",
+      "summary": "Create TroubleTicket resource",
+      "description": "",       
+      "deprecated": false,
+      "parameters": [
+      
+        
+        
+                      
+        {
+         "name": "troubleTicket",
+          "in": "body",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/TroubleTicket"
+          }
+        }          
+      ],   
+      "responses": {
+        "201": {
+          "description": "TroubleTicket",
+          "schema": {
+            "$ref": "#/definitions/TroubleTicket"
+          }
+        }
+      }
+    }
+	,
+		"get": {
+      "tags": [
+         "troubleTicket"
+      ],          
+      "operationId": "findTroubleTicket",
+      "summary": "Find TroubleTicket",
+      "description": "",       
+      "deprecated": false,
+         
+      "responses": {
+        "200": {
+          "description": "List of TroubleTicket",
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/TroubleTicket"
+            }
+          } 
+        }          
+      }
+    }
+	
+      },    
+      "/troubleTicket/{troubleTicketId}": {     
+        
+		"get": {
+      "tags": [
+         "troubleTicket"
+      ],    
+      "operationId": "getTroubleTicket",
+      "summary": "Get TroubleTicket by id",
+      "description": "",
+      "deprecated": false,
+      "parameters": [
+      
+                                  
+        
+        {
+          "name": "troubleTicketId",
+          "in": "path",
+          "required": true,            
+          "type": "string"
+        }
+        
+
+      ],   
+      "responses": {
+        "200": {
+          "description": "List of TroubleTicket",
+          "schema": {
+            "$ref": "#/definitions/TroubleTicket"
+            }
+          }
+      }        
+    }     
+	,
+		"put": {
+      "tags": [
+         "troubleTicket"
+      ],            
+      "operationId": "updateTroubleTicket",
+      "summary": "Update TroubleTicket by id",
+      "description": "",      
+      "deprecated": false,
+      "parameters": [
+      
+                                  
+        
+        {
+          "name": "troubleTicketId",
+          "in": "path",
+          "required": true,            
+          "type": "string"
+        }
+  ,
+               
+        {
+         "name": "troubleTicket",
+         "in": "body",
+         "required": true,
+         "schema": {
+           "$ref": "#/definitions/TroubleTicket"
+         }
+        }                               
+      ],   
+      "responses": {
+        "201": {
+          "description": "Success TroubleTicket",
+          "schema": {
+            "$ref": "#/definitions/TroubleTicket"
+            }
+          }
+      }             
+    }
+	
+      }
+  },
+"definitions": {
+  
+
+    "Note": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "date": {
+          
+          "type": "string",
+          "format": "date"
+        }
+        ,
+        "author": {
+          
+          "type": "string"
+        }
+        ,
+        "text": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "RelatedObject": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "involvement": {
+          
+          "type": "string"
+        }
+        ,
+        "reference": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "RelatedParty": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "href": {
+          
+          "type": "string"
+        }
+        ,
+        "role": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "TroubleTicket": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "id": {
+          
+          "type": "string"
+        }
+        ,
+        "correlationId": {
+          
+          "type": "string"
+        }
+        ,
+        "description": {
+          
+          "type": "string"
+        }
+        ,
+        "severity": {
+          
+          "type": "string"
+        }
+        ,
+        "type": {
+          
+          "type": "string"
+        }
+        ,
+        "creationDate": {
+          
+          "type": "string",
+          "format": "date"
+        }
+        ,
+        "targetResolutionDate": {
+          
+          "type": "string",
+          "format": "date"
+        }
+        ,
+        "status": {
+          
+          "type": "string",    
+          "enum": [   
+          
+            "Submitted",
+            "Rejected",
+            "Acknowledged",
+            "InProgress",
+            "InProgressHeld",
+            "InProgressPending",
+            "Resolved",
+            "Closed",
+            "Cancelled"
+          ]
+  
+        }
+        ,
+        "statusChangeReason": {
+          
+          "type": "string"
+        }
+        ,
+        "statusChangeDate": {
+          
+          "type": "string",
+          "format": "date"
+        }
+        ,
+        "relatedParty": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/RelatedParty"
+  
+              }
+            
+        }
+        ,
+        "relatedObject": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/RelatedObject"
+  
+              }
+            
+        }
+        ,
+        "note": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/Note"
+  
+              }
+            
+        }
+        
+      }
+    }
+                
+  ,
+   
+    "Error": {
+      "required": [
+          "code",
+          "message"
+      ],      
+      "properties": {
+        "code": {
+          "description": "An integer coding the error type. This is given to caller so he can translate them if required.",
+          "type": "integer"
+        },
+        "message": {
+          "description": "A short localized string that describes the error.",
+          "type": "string"
+        },
+        "description": {
+          "description": "(optional) A long localized error description if needed. It can contain precise information about which parameter is missing, or what are the identifier acceptable values.",
+          "type": "string"
+        },
+        "infoURL": {
+          "description": "(optional) A URL to online documentation that provides more information about the error.",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+	

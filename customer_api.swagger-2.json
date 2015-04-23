@@ -1,0 +1,1369 @@
+
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "",
+    "version": "2.0",
+    "title": "customerManagement"
+  },
+  "host": "api-designer.rd.francetelecom.fr",
+  "basePath":	"/api-docs/customerManagement/tmf/v2",
+  "schemes": [
+      "http"
+  ],
+  "consumes": [
+      "application/json"
+  ],
+  "produces": [
+      "application/json"
+  ],  
+  "paths": {
+      
+      "/customer": {     
+            
+		"post": {
+      "tags": [
+         "customer"
+      ],            
+      "operationId": "createCustomer",
+      "summary": "Create Customer resource",
+      "description": "",       
+      "deprecated": false,
+      "parameters": [
+      
+        
+        
+                      
+        {
+         "name": "customer",
+          "in": "body",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/Customer"
+          }
+        }          
+      ],   
+      "responses": {
+        "201": {
+          "description": "Customer",
+          "schema": {
+            "$ref": "#/definitions/Customer"
+          }
+        }
+      }
+    }
+	,
+		"get": {
+      "tags": [
+         "customer"
+      ],          
+      "operationId": "findCustomer",
+      "summary": "Find Customer",
+      "description": "",       
+      "deprecated": false,
+         
+      "responses": {
+        "200": {
+          "description": "List of Customer",
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/Customer"
+            }
+          } 
+        }          
+      }
+    }
+	
+      },    
+      "/customer/{customerId}": {     
+        
+		"delete": {
+      "tags": [
+         "customer"
+      ],    
+      "operationId": "deleteCustomer",
+      "summary": "Delete Customer by id",
+      "description": "",
+      "deprecated": false,
+      "parameters": [
+      
+                                  
+        
+        {
+          "name": "customerId",
+          "in": "path",
+          "required": true,            
+          "type": "string"
+        }
+  
+        
+      ],   
+      "responses": {
+        "204": {
+          "description": "Success"
+          }  
+      }   
+    }
+	,
+		"get": {
+      "tags": [
+         "customer"
+      ],    
+      "operationId": "getCustomer",
+      "summary": "Get Customer by id",
+      "description": "",
+      "deprecated": false,
+      "parameters": [
+      
+                                  
+        
+        {
+          "name": "customerId",
+          "in": "path",
+          "required": true,            
+          "type": "string"
+        }
+        
+
+      ],   
+      "responses": {
+        "200": {
+          "description": "List of Customer",
+          "schema": {
+            "$ref": "#/definitions/Customer"
+            }
+          }
+      }        
+    }     
+	,
+		"put": {
+      "tags": [
+         "customer"
+      ],            
+      "operationId": "updateCustomer",
+      "summary": "Update Customer by id",
+      "description": "",      
+      "deprecated": false,
+      "parameters": [
+      
+                                  
+        
+        {
+          "name": "customerId",
+          "in": "path",
+          "required": true,            
+          "type": "string"
+        }
+  ,
+               
+        {
+         "name": "customer",
+         "in": "body",
+         "required": true,
+         "schema": {
+           "$ref": "#/definitions/Customer"
+         }
+        }                               
+      ],   
+      "responses": {
+        "201": {
+          "description": "Success Customer",
+          "schema": {
+            "$ref": "#/definitions/Customer"
+            }
+          }
+      }             
+    }
+	
+      },    
+      "/customerAccount": {     
+            
+		"post": {
+      "tags": [
+         "customerAccount"
+      ],            
+      "operationId": "createCustomerAccount",
+      "summary": "Create CustomerAccount resource",
+      "description": "",       
+      "deprecated": false,
+      "parameters": [
+      
+        
+        
+                      
+        {
+         "name": "customerAccount",
+          "in": "body",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/CustomerAccount"
+          }
+        }          
+      ],   
+      "responses": {
+        "201": {
+          "description": "CustomerAccount",
+          "schema": {
+            "$ref": "#/definitions/CustomerAccount"
+          }
+        }
+      }
+    }
+	,
+		"get": {
+      "tags": [
+         "customerAccount"
+      ],          
+      "operationId": "findCustomerAccount",
+      "summary": "Find CustomerAccount",
+      "description": "",       
+      "deprecated": false,
+         
+      "responses": {
+        "200": {
+          "description": "List of CustomerAccount",
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/CustomerAccount"
+            }
+          } 
+        }          
+      }
+    }
+	
+      },    
+      "/customerAccount/{customerAccountId}": {     
+        
+		"delete": {
+      "tags": [
+         "customerAccount"
+      ],    
+      "operationId": "deleteCustomerAccount",
+      "summary": "Delete CustomerAccount by id",
+      "description": "",
+      "deprecated": false,
+      "parameters": [
+      
+                                  
+        
+        {
+          "name": "customerAccountId",
+          "in": "path",
+          "required": true,            
+          "type": "string"
+        }
+  
+        
+      ],   
+      "responses": {
+        "204": {
+          "description": "Success"
+          }  
+      }   
+    }
+	,
+		"get": {
+      "tags": [
+         "customerAccount"
+      ],    
+      "operationId": "getCustomerAccount",
+      "summary": "Get CustomerAccount by id",
+      "description": "",
+      "deprecated": false,
+      "parameters": [
+      
+                                  
+        
+        {
+          "name": "customerAccountId",
+          "in": "path",
+          "required": true,            
+          "type": "string"
+        }
+        
+
+      ],   
+      "responses": {
+        "200": {
+          "description": "List of CustomerAccount",
+          "schema": {
+            "$ref": "#/definitions/CustomerAccount"
+            }
+          }
+      }        
+    }     
+	,
+		"put": {
+      "tags": [
+         "customerAccount"
+      ],            
+      "operationId": "updateCustomerAccount",
+      "summary": "Update CustomerAccount by id",
+      "description": "",      
+      "deprecated": false,
+      "parameters": [
+      
+                                  
+        
+        {
+          "name": "customerAccountId",
+          "in": "path",
+          "required": true,            
+          "type": "string"
+        }
+  ,
+               
+        {
+         "name": "customerAccount",
+         "in": "body",
+         "required": true,
+         "schema": {
+           "$ref": "#/definitions/CustomerAccount"
+         }
+        }                               
+      ],   
+      "responses": {
+        "201": {
+          "description": "Success CustomerAccount",
+          "schema": {
+            "$ref": "#/definitions/CustomerAccount"
+            }
+          }
+      }             
+    }
+	
+      },    
+      "/paymentMean": {     
+            
+		"post": {
+      "tags": [
+         "paymentMean"
+      ],            
+      "operationId": "createPaymentMean",
+      "summary": "Create PaymentMean resource",
+      "description": "",       
+      "deprecated": false,
+      "parameters": [
+      
+        
+        
+                      
+        {
+         "name": "paymentMean",
+          "in": "body",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/PaymentMean"
+          }
+        }          
+      ],   
+      "responses": {
+        "201": {
+          "description": "PaymentMean",
+          "schema": {
+            "$ref": "#/definitions/PaymentMean"
+          }
+        }
+      }
+    }
+	,
+		"get": {
+      "tags": [
+         "paymentMean"
+      ],          
+      "operationId": "findPaymentMean",
+      "summary": "Find PaymentMean",
+      "description": "",       
+      "deprecated": false,
+         
+      "responses": {
+        "200": {
+          "description": "List of PaymentMean",
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PaymentMean"
+            }
+          } 
+        }          
+      }
+    }
+	
+      },    
+      "/paymentMean/{paymentMeanId}": {     
+        
+		"delete": {
+      "tags": [
+         "paymentMean"
+      ],    
+      "operationId": "deletePaymentMean",
+      "summary": "Delete PaymentMean by id",
+      "description": "",
+      "deprecated": false,
+      "parameters": [
+      
+                                  
+        
+        {
+          "name": "paymentMeanId",
+          "in": "path",
+          "required": true,            
+          "type": "string"
+        }
+  
+        
+      ],   
+      "responses": {
+        "204": {
+          "description": "Success"
+          }  
+      }   
+    }
+	,
+		"get": {
+      "tags": [
+         "paymentMean"
+      ],    
+      "operationId": "getPaymentMean",
+      "summary": "Get PaymentMean by id",
+      "description": "",
+      "deprecated": false,
+      "parameters": [
+      
+                                  
+        
+        {
+          "name": "paymentMeanId",
+          "in": "path",
+          "required": true,            
+          "type": "string"
+        }
+        
+
+      ],   
+      "responses": {
+        "200": {
+          "description": "List of PaymentMean",
+          "schema": {
+            "$ref": "#/definitions/PaymentMean"
+            }
+          }
+      }        
+    }     
+	,
+		"put": {
+      "tags": [
+         "paymentMean"
+      ],            
+      "operationId": "updatePaymentMean",
+      "summary": "Update PaymentMean by id",
+      "description": "",      
+      "deprecated": false,
+      "parameters": [
+      
+                                  
+        
+        {
+          "name": "paymentMeanId",
+          "in": "path",
+          "required": true,            
+          "type": "string"
+        }
+  ,
+               
+        {
+         "name": "paymentMean",
+         "in": "body",
+         "required": true,
+         "schema": {
+           "$ref": "#/definitions/PaymentMean"
+         }
+        }                               
+      ],   
+      "responses": {
+        "201": {
+          "description": "Success PaymentMean",
+          "schema": {
+            "$ref": "#/definitions/PaymentMean"
+            }
+          }
+      }             
+    }
+	
+      }
+  },
+"definitions": {
+  
+
+    "Customer": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "id": {
+          
+          "type": "integer",
+          "format": "int64"
+        }
+        ,
+        "href": {
+          
+          "type": "string"
+        }
+        ,
+        "name": {
+          
+          "type": "string"
+        }
+        ,
+        "status": {
+          
+          "type": "string"
+        }
+        ,
+        "description": {
+          
+          "type": "string"
+        }
+        ,
+        "validFor": {
+          
+                "$ref": "#/definitions/ValidFor"
+  
+        }
+        ,
+        "customerRank": {
+          
+          "type": "string"
+        }
+        ,
+        "relatedParty": {
+          
+                "$ref": "#/definitions/RelatedParty"
+  
+        }
+        ,
+        "characteristic": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/Characteristic"
+  
+              }
+            
+        }
+        ,
+        "contactMedium": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/ContactMedium"
+  
+              }
+            
+        }
+        ,
+        "customerAccount": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/CustomerAccount"
+  
+              }
+            
+        }
+        ,
+        "customerCreditProfile": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/CustomerCreditProfile"
+  
+              }
+            
+        }
+        ,
+        "paymentMean": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/PaymentMean"
+  
+              }
+            
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "CustomerAccount": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "id": {
+          
+          "type": "integer",
+          "format": "int64"
+        }
+        ,
+        "href": {
+          
+          "type": "string"
+        }
+        ,
+        "name": {
+          
+          "type": "string"
+        }
+        ,
+        "description": {
+          
+          "type": "string"
+        }
+        ,
+        "status": {
+          
+          "type": "string"
+        }
+        ,
+        "accountType": {
+          
+          "type": "string"
+        }
+        ,
+        "creditLimit": {
+          
+          "type": "string"
+        }
+        ,
+        "pin": {
+          
+          "type": "string"
+        }
+        ,
+        "receivableBalance": {
+          
+          "type": "number",
+          "format": "float"
+        }
+        ,
+        "customerAccountTaxExemption": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/CustomerAccountTaxExemption"
+  
+              }
+            
+        }
+        ,
+        "customerAccountRelationship": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/CustomerAccountRelationship"
+  
+              }
+            
+        }
+        ,
+        "contact": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/Contact"
+  
+              }
+            
+        }
+        ,
+        "customer": {
+          
+                "$ref": "#/definitions/CustomerRef"
+  
+        }
+        ,
+        "customerAccountBalance": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/CustomerAccountBalance"
+  
+              }
+            
+        }
+        ,
+        "paymentPlan": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/PaymentPlan"
+  
+              }
+            
+        }
+        ,
+        "lastModified": {
+          
+          "type": "string",
+          "format": "date-time"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "CustomerCreditProfile": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "creditProfileDate": {
+          
+          "type": "string",
+          "format": "date-time"
+        }
+        ,
+        "validFor": {
+          
+                "$ref": "#/definitions/ValidFor"
+  
+        }
+        ,
+        "creditRiskRating": {
+          
+          "type": "string"
+        }
+        ,
+        "creditScore": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "ContactMedium": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "type": {
+          
+          "type": "string"
+        }
+        ,
+        "validFor": {
+          
+                "$ref": "#/definitions/ValidFor"
+  
+        }
+        ,
+        "medium": {
+          
+                "$ref": "#/definitions/Medium"
+  
+        }
+        ,
+        "preferred": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "Medium": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "city": {
+          
+          "type": "string"
+        }
+        ,
+        "country": {
+          
+          "type": "string"
+        }
+        ,
+        "emailAddress": {
+          
+          "type": "string"
+        }
+        ,
+        "type": {
+          
+          "type": "string"
+        }
+        ,
+        "number": {
+          
+          "type": "string"
+        }
+        ,
+        "postcode": {
+          
+          "type": "string"
+        }
+        ,
+        "stateOrProvince": {
+          
+          "type": "string"
+        }
+        ,
+        "streetOne": {
+          
+          "type": "string"
+        }
+        ,
+        "streetTwo": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "PaymentMean": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "id": {
+          
+          "type": "integer",
+          "format": "int64"
+        }
+        ,
+        "href": {
+          
+          "type": "string"
+        }
+        ,
+        "name": {
+          
+          "type": "string"
+        }
+        ,
+        "validFor": {
+          
+                "$ref": "#/definitions/ValidFor"
+  
+        }
+        ,
+        "type": {
+          
+          "type": "string"
+        }
+        ,
+        "bankAccount": {
+          
+                "$ref": "#/definitions/BankAccount"
+  
+        }
+        ,
+        "relatedParty": {
+          
+                "$ref": "#/definitions/RelatedParty"
+  
+        }
+        ,
+        "creditCard": {
+          
+                "$ref": "#/definitions/CreditCard"
+  
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "Characteristic": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "name": {
+          
+          "type": "string"
+        }
+        ,
+        "value": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "RelatedParty": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "id": {
+          
+          "type": "string"
+        }
+        ,
+        "href": {
+          
+          "type": "string"
+        }
+        ,
+        "role": {
+          
+          "type": "string"
+        }
+        ,
+        "name": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "ValidFor": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "startDateTime": {
+          
+          "type": "string",
+          "format": "date-time"
+        }
+        ,
+        "endDateTime": {
+          
+          "type": "string",
+          "format": "date-time"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "CustomerAccountBalance": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "type": {
+          
+          "type": "string"
+        }
+        ,
+        "amount": {
+          
+          "type": "number",
+          "format": "float"
+        }
+        ,
+        "validFor": {
+          
+                "$ref": "#/definitions/ValidFor"
+  
+        }
+        ,
+        "status": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "PaymentPlan": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "status": {
+          
+          "type": "string"
+        }
+        ,
+        "type": {
+          
+          "type": "string"
+        }
+        ,
+        "priority": {
+          
+          "type": "string"
+        }
+        ,
+        "amount": {
+          
+          "type": "number",
+          "format": "float"
+        }
+        ,
+        "paymentFrequency": {
+          
+          "type": "string"
+        }
+        ,
+        "numberOfPayments": {
+          
+          "type": "string"
+        }
+        ,
+        "validFor": {
+          
+                "$ref": "#/definitions/ValidFor"
+  
+        }
+        ,
+        "paymentMean": {
+          
+                "$ref": "#/definitions/PaymentMeanRef"
+  
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "Contact": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "contactType": {
+          
+          "type": "string"
+        }
+        ,
+        "validFor": {
+          
+                "$ref": "#/definitions/ValidFor"
+  
+        }
+        ,
+        "contactName": {
+          
+          "type": "string"
+        }
+        ,
+        "partyRoleType": {
+          
+          "type": "string"
+        }
+        ,
+        "contactMedium": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/ContactMedium"
+  
+              }
+            
+        }
+        ,
+        "relatedParty": {
+          
+                "$ref": "#/definitions/RelatedParty"
+  
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "CustomerAccountRelationship": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "relationshipType": {
+          
+          "type": "string"
+        }
+        ,
+        "validFor": {
+          
+                "$ref": "#/definitions/ValidFor"
+  
+        }
+        ,
+        "customerAccount": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/CustomerAccountRef"
+  
+              }
+            
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "CustomerAccountTaxExemption": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "issuingJurisdiction": {
+          
+          "type": "string"
+        }
+        ,
+        "certificateNumber": {
+          
+          "type": "string"
+        }
+        ,
+        "reason": {
+          
+          "type": "string"
+        }
+        ,
+        "validFor": {
+          
+                "$ref": "#/definitions/ValidFor"
+  
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "CreditCard": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "creditCardHolder": {
+          
+          "type": "string"
+        }
+        ,
+        "type": {
+          
+          "type": "string"
+        }
+        ,
+        "number": {
+          
+          "type": "string"
+        }
+        ,
+        "expirationDate": {
+          
+          "type": "string",
+          "format": "date-time"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "BankAccount": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "bIC": {
+          
+          "type": "string"
+        }
+        ,
+        "domiciliation": {
+          
+          "type": "string"
+        }
+        ,
+        "iBAN": {
+          
+          "type": "string"
+        }
+        ,
+        "accountHolder": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "PaymentMeanRef": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "id": {
+          
+          "type": "string"
+        }
+        ,
+        "href": {
+          
+          "type": "string"
+        }
+        ,
+        "name": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "CustomerAccountRef": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "id": {
+          
+          "type": "string"
+        }
+        ,
+        "href": {
+          
+          "type": "string"
+        }
+        ,
+        "name": {
+          
+          "type": "string"
+        }
+        ,
+        "description": {
+          
+          "type": "string"
+        }
+        ,
+        "status": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "CustomerRef": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "id": {
+          
+          "type": "string"
+        }
+        ,
+        "href": {
+          
+          "type": "string"
+        }
+        ,
+        "name": {
+          
+          "type": "string"
+        }
+        ,
+        "description": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+   
+    "Error": {
+      "required": [
+          "code",
+          "message"
+      ],      
+      "properties": {
+        "code": {
+          "description": "An integer coding the error type. This is given to caller so he can translate them if required.",
+          "type": "integer"
+        },
+        "message": {
+          "description": "A short localized string that describes the error.",
+          "type": "string"
+        },
+        "description": {
+          "description": "(optional) A long localized error description if needed. It can contain precise information about which parameter is missing, or what are the identifier acceptable values.",
+          "type": "string"
+        },
+        "infoURL": {
+          "description": "(optional) A URL to online documentation that provides more information about the error.",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+	

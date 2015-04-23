@@ -1,0 +1,744 @@
+
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "",
+    "version": "2.0",
+    "title": "slaManagement"
+  },
+  "host": "api-designer.rd.francetelecom.fr",
+  "basePath":	"/api-docs/slaManagement/tmf/v2",
+  "schemes": [
+      "http"
+  ],
+  "consumes": [
+      "application/json"
+  ],
+  "produces": [
+      "application/json"
+  ],  
+  "paths": {
+      
+      "/sla": {     
+            
+		"post": {
+      "tags": [
+         "sla"
+      ],            
+      "operationId": "createSla",
+      "summary": "Create Sla resource",
+      "description": "",       
+      "deprecated": false,
+      "parameters": [
+      
+        
+        
+                      
+        {
+         "name": "sla",
+          "in": "body",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/Sla"
+          }
+        }          
+      ],   
+      "responses": {
+        "201": {
+          "description": "Sla",
+          "schema": {
+            "$ref": "#/definitions/Sla"
+          }
+        }
+      }
+    }
+	,
+		"get": {
+      "tags": [
+         "sla"
+      ],          
+      "operationId": "findSla",
+      "summary": "Find Sla",
+      "description": "",       
+      "deprecated": false,
+         
+      "responses": {
+        "200": {
+          "description": "List of Sla",
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/Sla"
+            }
+          } 
+        }          
+      }
+    }
+	
+      },    
+      "/sla/{slaId}": {     
+        
+		"delete": {
+      "tags": [
+         "sla"
+      ],    
+      "operationId": "deleteSla",
+      "summary": "Delete Sla by id",
+      "description": "",
+      "deprecated": false,
+      "parameters": [
+      
+                                  
+        
+        {
+          "name": "slaId",
+          "in": "path",
+          "required": true,            
+          "type": "string"
+        }
+  
+        
+      ],   
+      "responses": {
+        "204": {
+          "description": "Success"
+          }  
+      }   
+    }
+	,
+		"get": {
+      "tags": [
+         "sla"
+      ],    
+      "operationId": "getSla",
+      "summary": "Get Sla by id",
+      "description": "",
+      "deprecated": false,
+      "parameters": [
+      
+                                  
+        
+        {
+          "name": "slaId",
+          "in": "path",
+          "required": true,            
+          "type": "string"
+        }
+        
+
+      ],   
+      "responses": {
+        "200": {
+          "description": "List of Sla",
+          "schema": {
+            "$ref": "#/definitions/Sla"
+            }
+          }
+      }        
+    }     
+	,
+		"put": {
+      "tags": [
+         "sla"
+      ],            
+      "operationId": "updateSla",
+      "summary": "Update Sla by id",
+      "description": "",      
+      "deprecated": false,
+      "parameters": [
+      
+                                  
+        
+        {
+          "name": "slaId",
+          "in": "path",
+          "required": true,            
+          "type": "string"
+        }
+  ,
+               
+        {
+         "name": "sla",
+         "in": "body",
+         "required": true,
+         "schema": {
+           "$ref": "#/definitions/Sla"
+         }
+        }                               
+      ],   
+      "responses": {
+        "201": {
+          "description": "Success Sla",
+          "schema": {
+            "$ref": "#/definitions/Sla"
+            }
+          }
+      }             
+    }
+	
+      },    
+      "/slaViolation": {     
+            
+		"post": {
+      "tags": [
+         "slaViolation"
+      ],            
+      "operationId": "createSlaViolation",
+      "summary": "Create SlaViolation resource",
+      "description": "",       
+      "deprecated": false,
+      "parameters": [
+      
+        
+        
+                      
+        {
+         "name": "slaViolation",
+          "in": "body",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/SlaViolation"
+          }
+        }          
+      ],   
+      "responses": {
+        "201": {
+          "description": "SlaViolation",
+          "schema": {
+            "$ref": "#/definitions/SlaViolation"
+          }
+        }
+      }
+    }
+	,
+		"get": {
+      "tags": [
+         "slaViolation"
+      ],          
+      "operationId": "findSlaViolation",
+      "summary": "Find SlaViolation",
+      "description": "",       
+      "deprecated": false,
+         
+      "responses": {
+        "200": {
+          "description": "List of SlaViolation",
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/SlaViolation"
+            }
+          } 
+        }          
+      }
+    }
+	
+      },    
+      "/slaViolation/{slaViolationId}": {     
+        
+		"delete": {
+      "tags": [
+         "slaViolation"
+      ],    
+      "operationId": "deleteSlaViolation",
+      "summary": "Delete SlaViolation by id",
+      "description": "",
+      "deprecated": false,
+      "parameters": [
+      
+                                  
+        
+        {
+          "name": "slaViolationId",
+          "in": "path",
+          "required": true,            
+          "type": "string"
+        }
+  
+        
+      ],   
+      "responses": {
+        "204": {
+          "description": "Success"
+          }  
+      }   
+    }
+	,
+		"get": {
+      "tags": [
+         "slaViolation"
+      ],    
+      "operationId": "getSlaViolation",
+      "summary": "Get SlaViolation by id",
+      "description": "",
+      "deprecated": false,
+      "parameters": [
+      
+                                  
+        
+        {
+          "name": "slaViolationId",
+          "in": "path",
+          "required": true,            
+          "type": "string"
+        }
+        
+
+      ],   
+      "responses": {
+        "200": {
+          "description": "List of SlaViolation",
+          "schema": {
+            "$ref": "#/definitions/SlaViolation"
+            }
+          }
+      }        
+    }     
+	,
+		"put": {
+      "tags": [
+         "slaViolation"
+      ],            
+      "operationId": "updateSlaViolation",
+      "summary": "Update SlaViolation by id",
+      "description": "",      
+      "deprecated": false,
+      "parameters": [
+      
+                                  
+        
+        {
+          "name": "slaViolationId",
+          "in": "path",
+          "required": true,            
+          "type": "string"
+        }
+  ,
+               
+        {
+         "name": "slaViolation",
+         "in": "body",
+         "required": true,
+         "schema": {
+           "$ref": "#/definitions/SlaViolation"
+         }
+        }                               
+      ],   
+      "responses": {
+        "201": {
+          "description": "Success SlaViolation",
+          "schema": {
+            "$ref": "#/definitions/SlaViolation"
+            }
+          }
+      }             
+    }
+	
+      }
+  },
+"definitions": {
+  
+
+    "Sla": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "id": {
+          
+          "type": "integer",
+          "format": "int64"
+        }
+        ,
+        "href": {
+          
+          "type": "string"
+        }
+        ,
+        "name": {
+          
+          "type": "string"
+        }
+        ,
+        "description": {
+          
+          "type": "string"
+        }
+        ,
+        "version": {
+          
+          "type": "string"
+        }
+        ,
+        "validFor": {
+          
+                "$ref": "#/definitions/ValidFor"
+  
+        }
+        ,
+        "relatedParty": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/RelatedParty"
+  
+              }
+            
+        }
+        ,
+        "rule": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/Rule"
+  
+              }
+            
+        }
+        ,
+        "template": {
+          
+                "$ref": "#/definitions/Template"
+  
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "RelatedParty": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "href": {
+          
+          "type": "string"
+        }
+        ,
+        "role": {
+          
+          "type": "string"
+        }
+        ,
+        "name": {
+          
+          "type": "string"
+        }
+        ,
+        "validFor": {
+          
+                "$ref": "#/definitions/ValidFor"
+  
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "Rule": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "id": {
+          
+          "type": "string"
+        }
+        ,
+        "metric": {
+          
+          "type": "string"
+        }
+        ,
+        "unit": {
+          
+          "type": "string"
+        }
+        ,
+        "referenceValue": {
+          
+          "type": "string"
+        }
+        ,
+        "operator": {
+          
+          "type": "string"
+        }
+        ,
+        "tolerance": {
+          
+          "type": "string"
+        }
+        ,
+        "consequence": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "Template": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "href": {
+          
+          "type": "string"
+        }
+        ,
+        "name": {
+          
+          "type": "string"
+        }
+        ,
+        "description": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "ValidFor": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "startDateTime": {
+          
+          "type": "string",
+          "format": "date-time"
+        }
+        ,
+        "endDateTime": {
+          
+          "type": "string",
+          "format": "date-time"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "SlaViolation": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "id": {
+          
+          "type": "integer",
+          "format": "int64"
+        }
+        ,
+        "href": {
+          
+          "type": "string"
+        }
+        ,
+        "date": {
+          
+          "type": "string",
+          "format": "date-time"
+        }
+        ,
+        "sla": {
+          
+                "$ref": "#/definitions/SlaRef"
+  
+        }
+        ,
+        "violation": {
+          
+                "$ref": "#/definitions/Violation"
+  
+        }
+        ,
+        "relatedParty": {
+          
+              "type": "array",
+              "items": {
+                  
+                "$ref": "#/definitions/RelatedParty"
+  
+              }
+            
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "Violation": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "unit": {
+          
+          "type": "string"
+        }
+        ,
+        "referenceValue": {
+          
+          "type": "string"
+        }
+        ,
+        "operator": {
+          
+          "type": "string"
+        }
+        ,
+        "actualValue": {
+          
+          "type": "string"
+        }
+        ,
+        "tolerance": {
+          
+          "type": "number",
+          "format": "float"
+        }
+        ,
+        "violationAverage": {
+          
+          "type": "number",
+          "format": "float"
+        }
+        ,
+        "comment": {
+          
+          "type": "string"
+        }
+        ,
+        "consequence": {
+          
+          "type": "string"
+        }
+        ,
+        "attachment": {
+          
+                "$ref": "#/definitions/Attachment"
+  
+        }
+        ,
+        "rule": {
+          
+                "$ref": "#/definitions/RuleRef"
+  
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "SlaRef": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "href": {
+          
+          "type": "string"
+        }
+        ,
+        "description": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "Attachment": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "href": {
+          
+          "type": "string"
+        }
+        ,
+        "description": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+  
+
+    "RuleRef": {
+      
+      "type": "object",
+      "properties": {      
+      
+        "href": {
+          
+          "type": "string"
+        }
+        ,
+        "description": {
+          
+          "type": "string"
+        }
+        
+      }
+    }
+                
+  ,
+   
+    "Error": {
+      "required": [
+          "code",
+          "message"
+      ],      
+      "properties": {
+        "code": {
+          "description": "An integer coding the error type. This is given to caller so he can translate them if required.",
+          "type": "integer"
+        },
+        "message": {
+          "description": "A short localized string that describes the error.",
+          "type": "string"
+        },
+        "description": {
+          "description": "(optional) A long localized error description if needed. It can contain precise information about which parameter is missing, or what are the identifier acceptable values.",
+          "type": "string"
+        },
+        "infoURL": {
+          "description": "(optional) A URL to online documentation that provides more information about the error.",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+	
